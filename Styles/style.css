@@ -1,0 +1,312 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap');
+
+/* Menubar Styles */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 120px;
+    padding-right: 125px;
+    padding-top: 40px;
+    background-color: #2D25A0;
+}
+nav>ul{
+    display: flex;
+}
+nav>ul>li{
+    list-style: none;
+    padding-right: 36px;
+}
+nav>ul>li>a:hover{
+    color: #8b0235;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.fa-bars{
+    color: #FFF;
+    cursor: pointer;
+    display: none;
+}
+.dropdown{
+    position: absolute;
+    overflow: hidden;
+    background-color: #E02C6D;
+}
+.fa-bars>.dropdown>li{
+    list-style: none;
+    padding-bottom: 5px;
+    display: none;
+}
+.fa-bars:active li{
+    display: block;
+}
+.fa-bars>.dropdown>li>a{
+    text-decoration: none;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.fa-bars>li>a:hover{
+    color: #8b0235;
+}
+/* common utilities */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+}
+.container {
+    display: flex;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 27px;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 0%;
+    color: #6C6C6C;
+}
+/* football-banner styles */
+.football-banner {
+    height: 600px;
+    background: #2D25A0;
+    align-items: center;
+    padding: 60px 150px;
+}
+.banner-image {
+    width: 556px;
+    height: 438px;
+}
+.banner-content {
+    padding-right: 140px;
+    color: #FFF;
+}
+.anim-left{
+    opacity: 0;
+    transform: translateX(-500px);
+    animation: moveright 1.5s linear forwards;
+}
+@keyframes moveright {
+    100%{
+        opacity: 1;
+    transform: translateX(0px);
+    }
+    
+}
+.anim-right{
+    opacity: 0;
+    transform: translateX(500px);
+    animation: moveleft 1.5s linear forwards;
+}
+@keyframes moveleft {
+    100%{
+        opacity: 1;
+    transform: translateX(0px);
+    }
+    
+}
+
+
+
+.live-link {
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 24px;
+    background-color: #E02C6D;
+}
+.fa-arrow-right{
+    padding-left: 5px;
+}
+.fa-arrow-right-to-bracket{
+    padding-right: 5px;
+}
+.live-link:hover {
+    background-color: #8b0235;
+}
+/* Top-players styles */
+.players {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 450px;
+    padding: 15px;
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 1px 11px gray;
+    text-align: center;
+}
+.player:hover{
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+}
+
+.player img {
+    width: 300px;
+    height: 256px;
+    border-radius: 5px;
+}
+
+.player-name {
+    font-size: 20px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    
+}
+
+/* Match highlight section style */
+.game-highlights {
+    padding: 150px 50px;
+    align-items: center;
+}
+
+.match-image {
+    width: 567px;
+    height: 427px;
+}
+
+.Highlight-content {
+    padding-right: 102px;
+    padding-left: 66px;
+}
+
+.Highlight-content p {
+    margin-bottom: 27px;
+}
+
+/* Footer Style */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 68px;
+    width: 350px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+
+}
+
+/* Responsive with media */
+
+
+/* responsive for mobile device */
+@media only screen and (max-width:688px) {
+    nav{
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 360px;
+    }
+    nav>ul{
+        display: none;
+    }
+    .fa-bars{
+        display: block;
+    }
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .football-banner {
+        width: 360px;
+        height: 695px;
+        padding: 100px 20px 100px 20px;
+        justify-content: center;
+    }
+
+    .banner-image {
+        width: auto;
+        height: auto;
+        padding-top: 100px;
+    }
+
+    .banner-content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .players {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player {
+        height: 474px;
+        width: auto;
+    }
+
+    .game-highlights {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding: 10px 2px;
+    }
+
+    .Highlight-content {
+        text-align: center;
+    }
+
+    .match-image {
+        width: auto;
+        height: auto;
+        padding: 30px 10px 0px 10px;
+    }
+
+    footer {
+
+        width: 100%;
+    }
+
+    .logo img {
+        height: 50%;
+        width: 70%;
+    }
+
+    .social-icons img {
+        width: 16px;
+        height: 16px;
+        padding: 0 5px;
+        margin-bottom: 5px;
+
+    }
+
+
+
+}
