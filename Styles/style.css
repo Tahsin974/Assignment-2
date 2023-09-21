@@ -30,7 +30,7 @@ nav>ul>li>a{
 .fa-bars{
     color: #FFF;
     cursor: pointer;
-    visibility: hidden;
+    display: none;
 }
 .dropdown{
     position: absolute;
@@ -222,16 +222,19 @@ footer {
 
 /* responsive for mobile device */
 @media only screen and (max-width:688px) {
+    body{
+        width: auto;
+    }
     nav{
         padding-left: 20px;
         padding-right: 20px;
-        width: 340px;
+        width: 91%
     }
     nav>ul{
         display: none;
     }
     .fa-bars{
-        visibility: visible;
+        display: block;
     }
     h1 {
         font-size: 30px;
